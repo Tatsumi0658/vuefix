@@ -1,10 +1,8 @@
-<script type="text/x-template" id="grid-temnplate">
+<script type="text/x-template" id="grid-template">
   <table>
     <thead>
       <tr>
-        <th v-for="key in columns"
-            @click = "sortBy(key)"
-            :class="{active: sortkey == key }" >
+        <th v-for="key in columns" @click = "sortBy(key)" :class="{active: sortKey == key }" >
           {{ key | capitalize }}
           <span class="arrow" :class="sortOrders[key] > 0 ? 'asc': 'desc'"></span>
           </th>
